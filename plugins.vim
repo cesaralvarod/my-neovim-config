@@ -1,6 +1,8 @@
 call plug#begin('~/.vim/plugged')
 
 " Plug 'glepnir/dashboard-nvim'
+Plug 'applejwjcat/dashboard-nvim'
+Plug 'liuchengxu/vim-clap'
 
 " Syntax
 
@@ -36,7 +38,6 @@ Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'drewtempelmeyer/palenight.vim'
 
 " Tree
-
 Plug 'nanozuki/tabby.nvim'
 Plug 'scrooloose/nerdtree'
 " Plug 'preservim/nerdtree'
@@ -58,6 +59,7 @@ Plug 'tomtom/tcomment_vim' " Add comments
 
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
+Plug 'romgrk/barbar.nvim'
 
 " Autocomplete
 

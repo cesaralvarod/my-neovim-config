@@ -8,7 +8,6 @@ nmap <c-d> :bd<CR>
 " Ventana doble
 
 nnoremap <c-z> :vsp<CR>
-inoremap <C-z> <c-o>:vsp<CR>
 
 " General
 
@@ -25,6 +24,8 @@ imap <c-s> <c-o>:w<CR>
 nmap <c-a> :wa<CR>
 imap <c-a> <c-o>:wa<CR>
 
+
+" Terminal
 
 nnoremap <leader>t :ter<CR>
 
@@ -62,13 +63,6 @@ nnoremap <silent> ;; <cmd>Telescope help_tags<cr>
 " Easymotion
 
 nmap <leader>f <Plug>(easymotion-overwin-f2)
-
-" Coc
-
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " Open javascript file with node
 
@@ -113,12 +107,13 @@ function! OpenTerminal()
   endif
 endfunction
 
-nnoremap <C-t> :call OpenTerminal()<CR>
+" nnoremap <C-c> :sp :call OpenTerminal()<CR>
+" nnoremap <C-x> :vsp :call OpenTerminal()<CR>
 
 " Atajo para llamar a la terminal bash
 
-nmap <C-c> :sp term://bash<CR>
-nmap <C-x> :vsp term://bash<CR>
+nmap <C-c> :sp term://fish<CR>
+nmap <C-x> :vsp term://fish<CR>
 
 
 tnoremap <Esc> <C-\><C-n>
@@ -132,3 +127,23 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" Barbar
+
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferLineCyclePrev<CR>
+nnoremap <silent>    <A-.> :BufferLineCycleNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferLineMovePrev<CR>
+nnoremap <silent>    <A->> :BufferLineMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> :BufferLineGoToBuffer 1<CR>
+nnoremap <silent>    <A-2> :BufferLineGoToBuffer 2<CR>
+nnoremap <silent>    <A-3> :BufferLineGoToBuffer 3<CR>
+nnoremap <silent>    <A-4> :BufferLineGoToBuffer 4<CR>
+nnoremap <silent>    <A-5> :BufferLineGoToBuffer 5<CR>
+nnoremap <silent>    <A-6> :BufferLineGoToBuffer 6<CR>
+nnoremap <silent>    <A-7> :BufferLineGoToBuffer 7<CR>
+nnoremap <silent>    <A-8> :BufferLineGoToBuffer 8<CR>
+nnoremap <silent>    <A-9> :BufferLineGoToBuffer 9<CR>
+nnoremap <silent>    <A-0> <Cmd>BufferLast<CR>
