@@ -27,7 +27,9 @@ imap <c-a> <c-o>:wa<CR>
 
 " Terminal
 
-nnoremap <leader>t :ter<CR>
+" nnoremap <leader>t :ter<CR>
+
+" Buffers
 
 noremap <leader>k :bnext<CR>
 noremap <leader>j :bprevious<CR>
@@ -49,9 +51,10 @@ nnoremap K 10<C-y>
 
 " NerdTree
 
-nmap nt :NERDTreeToggle<CR>
+" noremap nt :NERDTreeToggle<CR>
+noremap nt :NvimTreeToggle<CR>
 
-cnoreabbrev tree NERDTreeToggle
+" cnoreabbrev tree NERDTreeToggle
 
 " Telescope
 
@@ -113,7 +116,7 @@ endfunction
 " Atajo para llamar a la terminal bash
 
 nmap <C-c> :sp term://fish<CR>
-nmap <C-x> :vsp term://fish<CR>
+nmap <C-z> :vsp term://fish<CR>
 
 
 tnoremap <Esc> <C-\><C-n>
@@ -147,3 +150,12 @@ nnoremap <silent>    <A-7> :BufferLineGoToBuffer 7<CR>
 nnoremap <silent>    <A-8> :BufferLineGoToBuffer 8<CR>
 nnoremap <silent>    <A-9> :BufferLineGoToBuffer 9<CR>
 nnoremap <silent>    <A-0> <Cmd>BufferLast<CR>
+
+" CoC
+
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>gi <Plug>(coc-implementation)
+
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
